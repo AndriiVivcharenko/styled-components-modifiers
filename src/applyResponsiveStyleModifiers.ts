@@ -3,8 +3,6 @@
  * `styleModifierPropTypes`. This should be removed before the v2 release.
  */
 
-import { InterpolationFunction, SimpleInterpolation } from 'styled-components';
-
 import { DEFAULT_MODIFIERS_KEY } from './constants';
 
 import isResponsiveModifiersProp from './utils/isResponsiveModifiersProp';
@@ -24,16 +22,17 @@ import {
  * @param {string} [modifiersPropName="responsiveModifiers"]
  * @returns
  */
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export default function applyResponsiveStyleModifiers(
   modifiersConfig: ModifiersConfig,
   modifiersPropName: string = 'responsiveModifiers',
-): InterpolationFunction<ComponentProps> {
+) {
   return (
     props: ComponentProps & {
       size: string;
       [modifiersPropName: string]: ModifiersProp<ModifiersConfig>;
     },
-  ): SimpleInterpolation => {
+  ) => {
     const responsiveModifiers = props[modifiersPropName];
 
     if (isResponsiveModifiersProp(responsiveModifiers)) {

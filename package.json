@@ -35,7 +35,6 @@
     "prebuild": "yarn build:clean && yarn lint && yarn test",
     "prepublish": "yarn build",
     "prettier": "prettier --write '**/*.{js*,ts*,md}'",
-    "review": "yarn lint && yarn test",
     "test": "jest",
     "test:coverage:report": "open-cli coverage/lcov-report/index.html",
     "lint:ci": "eslint --format junit -o reports/junit/js-lint-results.xml src/**",
@@ -43,11 +42,11 @@
   },
   "peerDependencies": {
     "prop-types": "^15.4.0",
-    "styled-components": "^2 || ^3 || ^4"
+    "styled-components": "^2 || ^3 || ^4 || ^t"
   },
   "dependencies": {
     "@types/prop-types": "^15.7.1",
-    "@types/styled-components": "^4.1.15",
+    "@types/styled-components-react-native": "^5.2.5",
     "lodash": "^4.17.15"
   },
   "devDependencies": {

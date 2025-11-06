@@ -1,4 +1,4 @@
-import { SimpleInterpolation, StyledProps } from 'styled-components';
+import { SimpleInterpolation, StyledProps } from 'styled-components/native';
 
 export type ModifierName = string;
 

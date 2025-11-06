@@ -158,7 +158,7 @@ Then, we need to apply the modifier configuration object (`MODIFIER_CONFIG`) to
 the styled component we want to modify:
 
 ```jsx
-import styled from 'styled-components';
+import styled from 'styled-components/native';
 import { applyStyleModifiers } from 'styled-components-modifiers';
 
 const Button = styled.button`
@@ -267,7 +267,7 @@ When designing components that are intended to be responsive, you may find it
 useful to apply different styles based on a `size` prop as shown below.
 
 ```jsx
-import styled from 'styled-components';
+import styled from 'styled-components/native';
 import {
   applyResponsiveStyleModifiers,
   applyStyleModifiers,

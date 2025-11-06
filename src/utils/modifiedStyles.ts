@@ -1,6 +1,6 @@
 import isFunction from 'lodash/isFunction';
 import isObject from 'lodash/isObject';
-import { SimpleInterpolation } from 'styled-components';
+import { SimpleInterpolation } from 'styled-components/native';
 
 import normalizeModifiers from './normalizeModifiers';
 

@@ -1,5 +1,3 @@
-import { InterpolationFunction, SimpleInterpolation } from 'styled-components';
-
 import { DEFAULT_MODIFIERS_KEY } from './constants';
 
 import isResponsiveModifiersProp from './utils/isResponsiveModifiersProp';
@@ -19,16 +17,17 @@ import {
  * @param {string} [modifiersPropName="modifiers"]
  * @returns
  */
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export default function applyStyleModifiers(
   modifiersConfig: ModifiersConfig,
   modifiersPropName: string = 'modifiers',
-): InterpolationFunction<ComponentProps> {
+) {
   return (
     props: ComponentProps & {
       size: string;
       [modifiersPropName: string]: ModifiersProp<ModifiersConfig>;
     },
-  ): SimpleInterpolation => {
+  ) => {
     const modifiers = props[modifiersPropName];
 
     if (isResponsiveModifiersProp(modifiers)) {
